@@ -1,0 +1,238 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.vermelho-claro {
+    color: #ff9199;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    color: #f8f8f8;
+    background: linear-gradient(135deg, #000000 0%, #2c1810 100%);
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #dc3545;
+}
+
+h1 {
+    text-align: center;
+    margin: 5rem 0 2rem;
+    color: #dc3545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(20, 20, 20, 0.95);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border: 1px solid #dc3545;
+    scroll-margin-top: 90px; /* Evita que o header fixe corte o título ao navegar por âncoras */
+}
+
+h2 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #dc3545;
+    padding-bottom: 0.5rem;
+}
+
+.imagem-lateral {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.imagem-lateral img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border: 2px solid #dc3545;
+    flex-shrink: 0;
+    width: 250px;
+    height: auto;
+}
+
+.imagem-lateral > div {
+    flex: 1;
+}
+
+.retangulo-arredondado {
+    width: 300px;
+    height: auto;
+    min-height: 150px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    border: 1px solid #dc3545;
+}
+
+.retangulo-arredondado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.retangulo-arredondado h3 {
+    margin: 0 0 15px 0;
+    color: #dc3545;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.retangulo-arredondado ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #ff9199;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+section p,
+section ul {
+    margin-bottom: 1rem;
+}
+
+section ul {
+    padding-left: 2rem;
+    list-style: disc outside;
+    margin-left: 0.5rem;
+}
+
+section ul li {
+    margin-bottom: 0.6rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background:rgba(220, 53, 69, 1);
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.conteiner-retangulos-arredontados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 2rem;
+    color: #f8f8f8;
+    margin-top: 2rem;
+    border-top: 2px solid #dc3545;
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #ff5a6a;
+    text-decoration: underline;
+}
+
+footer a {
+    color: #dc3545;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff5a6a;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .imagem-lateral {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .retangulo-arredondado {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
